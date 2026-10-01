@@ -1,0 +1,162 @@
+{
+ "about": [
+  "What the rested-on-by region renders, asked in the worlds its views ask it, each handed what the region declares it reads.",
+  "bound hands no rested facts yet: root:obligations tells the four places whose uses/obligations pin stands at .@336, with their repository lines and verify's docs/what; the prose is lane C's draft.",
+  "root:obligations-resolved tells the same four places with topos and verify resolved: only those two are listed."
+ ],
+ "worlds": {
+  "root:obligations": {
+   "lines": [
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/heading value=capital",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/list value=\", | and \"",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/numbers value=no|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/sentence value=capital|period",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/words value=spaces",
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it, and a place that names no language has no prose\" at=witness:a-capsule-that-guessed-the-language-by-the-shape-of-a-path by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"where a line of a block is cut into its steps, when a region is read below its full resolution\" at=witness:a-resolution-cut-at-a-literal by=target form=alphabet measure=id role=reads scope=form/prose/en/separator value=\" · \"",
+    "bound-lock/1 about=\"What rests on it\" at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=text role=writes scope=prose/en/rested/heading value=lock",
+    "bound-lock/1 about=[{place}]({repository}) at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=text role=writes scope=prose/en/rested/place value=lock",
+    "bound-lock/1 at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=id role=writes scope=form/template/rested/place value=place|repository",
+    "bound-lock/1 about=\"[what it is]({repository}/blob/HEAD/{what})\" at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=text role=writes scope=prose/en/rested/what value=lock",
+    "bound-lock/1 at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=id role=writes scope=form/template/rested/what value=repository|what"
+   ],
+   "regions": {
+    "state": {
+     "lines": [],
+     "receipts": [
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos/repository value=https://github.com/Lapxo/topos",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos-bound/repository value=https://github.com/lapxo/topos-bound",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos-typescript-tree/repository value=https://github.com/lapxo/topos-typescript-tree",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/verify/repository value=https://github.com/lapxo/verify",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/verify/what value=docs/what.md"
+     ]
+    }
+   }
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/heading value=capital",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/list value=\", | and \"",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/numbers value=no|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/sentence value=capital|period",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/words value=spaces",
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"where a line of a block is cut into its steps, when a region is read below its full resolution\" at=witness:a-resolution-cut-at-a-literal by=target form=alphabet measure=id role=reads scope=form/prose/en/separator value=\" · \""
+   ],
+   "regions": {
+    "state": {
+     "lines": [],
+     "receipts": [
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=second/verdict value=agrees",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/CITATION.cff value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/CONTRIBUTING.md value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/README.md value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/.gitignore value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/LICENSE value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/package.json value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/.github/workflows/release.yml value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/.github/workflows/tag.yml value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/.github/workflows/test.yml value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/receipts.bound value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/docs/reference.md value=present",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=write/tsconfig.json value=present"
+     ]
+    }
+   }
+  },
+  "root:obligations-resolved": {
+   "lines": [
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/heading value=capital",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/list value=\", | and \"",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/numbers value=no|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/sentence value=capital|period",
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=target form=alphabet measure=id role=writes scope=form/prose/en/words value=spaces",
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it, and a place that names no language has no prose\" at=witness:a-capsule-that-guessed-the-language-by-the-shape-of-a-path by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"where a line of a block is cut into its steps, when a region is read below its full resolution\" at=witness:a-resolution-cut-at-a-literal by=target form=alphabet measure=id role=reads scope=form/prose/en/separator value=\" · \"",
+    "bound-lock/1 about=\"What rests on it\" at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=text role=writes scope=prose/en/rested/heading value=lock",
+    "bound-lock/1 about=[{place}]({repository}) at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=text role=writes scope=prose/en/rested/place value=lock",
+    "bound-lock/1 at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=id role=writes scope=form/template/rested/place value=place|repository",
+    "bound-lock/1 about=\"[what it is]({repository}/blob/HEAD/{what})\" at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=text role=writes scope=prose/en/rested/what value=lock",
+    "bound-lock/1 at=witness:a-readme-in-the-one-shape by=target form=alphabet measure=id role=writes scope=form/template/rested/what value=repository|what"
+   ],
+   "regions": {
+    "state": {
+     "lines": [],
+     "receipts": [
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos/repository value=https://github.com/Lapxo/topos",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos-bound/repository value=https://github.com/lapxo/topos-bound",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos-typescript-tree/repository value=https://github.com/lapxo/topos-typescript-tree",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/verify/repository value=https://github.com/lapxo/verify",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/verify/what value=docs/what.md",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/topos/source value=https://github.com/Lapxo/topos",
+      "bound-lock/1 at=place:fold by=fold form=alphabet measure=fact role=writes scope=rested/verify/source value=https://github.com/lapxo/verify"
+     ]
+    }
+   }
+  }
+ },
+ "cases": [
+  {
+   "name": "root:obligations · rested-on-by@3 · README.md",
+   "world": "root:obligations",
+   "request": {
+    "region": "rested-on-by",
+    "at": 3,
+    "shape": "README.md",
+    "name": "obligations",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/rested/*",
+     "region/state",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "name": "root:topos-node · rested-on-by@3 · README.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "rested-on-by",
+    "at": 3,
+    "shape": "README.md",
+    "name": "topos-node",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/rested/*",
+     "region/state",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "name": "root:obligations-resolved · rested-on-by@3 · README.md",
+   "world": "root:obligations-resolved",
+   "request": {
+    "region": "rested-on-by",
+    "at": 3,
+    "shape": "README.md",
+    "name": "obligations",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/rested/*",
+     "region/state",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "## What rests on it",
+    "",
+    "- [topos](https://github.com/Lapxo/topos)",
+    "- [verify](https://github.com/lapxo/verify) · [what it is](https://github.com/lapxo/verify/blob/HEAD/docs/what.md)"
+   ]
+  }
+ ]
+}

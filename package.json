@@ -1,0 +1,42 @@
+{
+  "name": "@lapxo/topos-doc",
+  "version": "0.1.0",
+  "description": "The pages a place is read through, rendered from its lines and the receipts of its regions: its door, its guide, its reference, its figures and its citation.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Lapxo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lapxo/topos-doc.git"
+  },
+  "keywords": [
+    "topos",
+    "capsule",
+    "pages",
+    "render"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.12"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "TARGET.bound"
+  ],
+  "scripts": {
+    "build": "tsc --build"
+  },
+  "dependencies": {
+    "@lapxo/obligations": "^0.3.5",
+    "@lapxo/topos": "0.1.2"
+  }
+}

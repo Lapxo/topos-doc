@@ -1,0 +1,86 @@
+{
+ "about": [
+  "What the commands region renders, asked in the worlds its views ask it, each handed what the region declares it reads."
+ ],
+ "worlds": {
+  "root:obligations": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it, and a place that names no language has no prose\" at=witness:a-capsule-that-guessed-the-language-by-the-shape-of-a-path by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"the resolution a page states each block whole at\" at=witness:a-number-that-was-look by=target form=alphabet measure=id role=writes scope=form/page/statement value=3",
+    "bound-lock/1 about=\"the resolution a page shows every line whole at, as the reference does\" at=witness:a-number-that-was-look by=target form=alphabet measure=id role=writes scope=form/page/whole value=8"
+   ],
+   "regions": {}
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"the resolution a page states each block whole at\" at=witness:a-number-that-was-look by=target form=alphabet measure=id role=writes scope=form/page/statement value=3",
+    "bound-lock/1 about=\"the resolution a page shows every line whole at, as the reference does\" at=witness:a-number-that-was-look by=target form=alphabet measure=id role=writes scope=form/page/whole value=8"
+   ],
+   "regions": {}
+  },
+  "root:.": {
+   "lines": [
+    "bound-lock/1 at=witness:a-page-that-knew-its-world by=owner epoch=142 form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"npx bound .            # fold this place: colours, forks, what is open\\nnpx bound obligations/ # zoom in: one place, complete\" at=policy:prose/commands by=owner epoch=82 form=alphabet measure=text role=writes scope=prose/en/commands value=lock",
+    "bound-lock/1 about=\"the resolution a page states each block whole at\" at=witness:a-number-that-was-look by=target form=alphabet measure=id role=writes scope=form/page/statement value=3",
+    "bound-lock/1 about=\"the resolution a page shows every line whole at, as the reference does\" at=witness:a-number-that-was-look by=target form=alphabet measure=id role=writes scope=form/page/whole value=8"
+   ],
+   "regions": {}
+  }
+ },
+ "cases": [
+  {
+   "name": "root:. · commands@3 · README.md",
+   "world": "root:.",
+   "request": {
+    "region": "commands",
+    "at": 3,
+    "shape": "README.md",
+    "name": "diorism",
+    "reads": [
+     "lang",
+     "prose/*/commands",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "```bash",
+    "npx bound .            # fold this place: colours, forks, what is open\nnpx bound obligations/ # zoom in: one place, complete",
+    "```"
+   ]
+  },
+  {
+   "name": "root:obligations · commands@3 · README.md",
+   "world": "root:obligations",
+   "request": {
+    "region": "commands",
+    "at": 3,
+    "shape": "README.md",
+    "name": "obligations",
+    "reads": [
+     "lang",
+     "prose/*/commands",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "name": "root:topos-node · commands@3 · README.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "commands",
+    "at": 3,
+    "shape": "README.md",
+    "name": "topos-node",
+    "reads": [
+     "lang",
+     "prose/*/commands",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  }
+ ]
+}

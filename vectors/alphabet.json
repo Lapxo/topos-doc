@@ -1,0 +1,126 @@
+{
+ "about": [
+  "What the alphabet region renders, asked in the worlds its views ask it, each handed what the region declares it reads."
+ ],
+ "worlds": {
+  "root:obligations": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it, and a place that names no language has no prose\" at=witness:a-capsule-that-guessed-the-language-by-the-shape-of-a-path by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"**{name}**, a form of {args}\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/form value=lock",
+    "bound-lock/1 about=\"Every operation this package offers, every law it states and every form it declares: {operations} operations, {laws} laws, {forms} forms.\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/lead value=lock",
+    "bound-lock/1 about=\"What the object rests on\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/rests value=lock",
+    "bound-lock/1 about=\"derived by the reader\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/derived value=lock",
+    "bound-lock/1 about=\"no law\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/unrested value=lock",
+    "bound-lock/1 about=\"not a derivation\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/underived value=lock",
+    "bound-lock/1 about=\"the formulas the first resolution writes, in the order a reader looks for them: the object and its poles, where a cell is information, what no act raises, the sign and phase a claim carries, where a signature lives, the quarter turn and the state\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/formulas value=law/D11-the-obligatory|law/A1-encounter|law/A7-freedom-conserved|law/T49-amplitude-has-sign-and-phase|law/T95-signatures-live-where-they-are-signed|law/T87-the-quarter-turn|law/D3-state",
+    "bound-lock/1 about=\"the four states in the order the object decides them: bounds that cross are a conflict whatever the claims, one origin is required, claims that do not meet are a conflict, and claims that meet are free where they fit the bounds and forbidden where they do not\" at=witness:a-state-table-in-another-order-than-the-code by=target form=alphabet measure=id role=writes scope=notation/states value=\"bounds that cross=CONFLICT|one origin=REQUIRED|claims that do not meet=CONFLICT|claims that meet and fit the bounds=FREE|claims that meet outside the bounds=FORBIDDEN\"",
+    "bound-lock/1 about=\"the glyphs the notation joins its symbols with: the brackets of the tuple, membership, the product and the arrow of a signature, and equivalence\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/glue value=\"open=⟨|close=⟩|member=∈|product=×|maps=→|iff=⟺\"",
+    "bound-lock/1 about=\"the members of the object the notation writes, in two pairs: its value, the floor ⊥ and the ceiling ⊤, both read and never stored, and its relations, the origins O that spoke on it and the order of rest ⊑ it stands in\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/cell value=\"floor=⊥|ceiling=⊤|origins=O|rest=⊑\"",
+    "bound-lock/1 about=\"the types the arrows of the notation are written in, each with its symbol: an origin is its name and its phase, an act carries its sign, and a state is one of four\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/types value=\"Origin=(o, φ)|Act=s|State=state\"",
+    "bound-lock/1 about=\"what the tuple is read over and at: the lattice L it is given and the resolution r of the reading, neither of them a part of the cell\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/gloss value=\"over L at r\"",
+    "bound-lock/1 about=\"| law | kind | view | rests on | sentence | formula | yes | falsifier | reproduced |\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/laws-table value=lock",
+    "bound-lock/1 about=\"| operation | view | signature | refuses | law |\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/operations-table value=lock",
+    "bound-lock/1 about=\"| symbol | names |\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/alphabet-table value=lock",
+    "bound-lock/1 about=\"| unit | signature |\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/units-table value=lock",
+    "bound-lock/1 about=Alphabet at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/alphabet value=lock",
+    "bound-lock/1 about=Forms at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/forms value=lock",
+    "bound-lock/1 about=Laws at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/laws value=lock",
+    "bound-lock/1 about=Notation at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/notation value=lock",
+    "bound-lock/1 about=Operations at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/operations value=lock",
+    "bound-lock/1 about=Reference at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/heading value=lock",
+    "bound-lock/1 about=States at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/states value=lock",
+    "bound-lock/1 about=Units at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/units value=lock",
+    "bound-lock/1 about=any at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/any value=lock",
+    "bound-lock/1 about=law at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/unkinded value=lock",
+    "bound-lock/1 about=no at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/no value=lock",
+    "bound-lock/1 about=none at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/none value=lock",
+    "bound-lock/1 about=nothing at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/nothing value=lock",
+    "bound-lock/1 about=owed at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/owed value=lock",
+    "bound-lock/1 about=yes at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/reference/yes value=lock",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/claim value=\"who=origin|lo=span.lo|hi=span.hi|without=takes\"",
+    "bound-lock/1 at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/moves value=vectors/moves.json",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/named value=string|number|boolean",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/object value=law/D11-the-obligatory",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/renders value=\"FREE=green|REQUIRED=grey|FORBIDDEN=red|CONFLICT=fork\"",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/symbols value=\"object=c|state=state\""
+   ],
+   "regions": {}
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"the formulas the first resolution writes, in the order a reader looks for them: the object and its poles, where a cell is information, what no act raises, the sign and phase a claim carries, where a signature lives, the quarter turn and the state\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/formulas value=law/D11-the-obligatory|law/A1-encounter|law/A7-freedom-conserved|law/T49-amplitude-has-sign-and-phase|law/T95-signatures-live-where-they-are-signed|law/T87-the-quarter-turn|law/D3-state",
+    "bound-lock/1 about=\"the four states in the order the object decides them: bounds that cross are a conflict whatever the claims, one origin is required, claims that do not meet are a conflict, and claims that meet are free where they fit the bounds and forbidden where they do not\" at=witness:a-state-table-in-another-order-than-the-code by=target form=alphabet measure=id role=writes scope=notation/states value=\"bounds that cross=CONFLICT|one origin=REQUIRED|claims that do not meet=CONFLICT|claims that meet and fit the bounds=FREE|claims that meet outside the bounds=FORBIDDEN\"",
+    "bound-lock/1 about=\"the glyphs the notation joins its symbols with: the brackets of the tuple, membership, the product and the arrow of a signature, and equivalence\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/glue value=\"open=⟨|close=⟩|member=∈|product=×|maps=→|iff=⟺\"",
+    "bound-lock/1 about=\"the members of the object the notation writes, in two pairs: its value, the floor ⊥ and the ceiling ⊤, both read and never stored, and its relations, the origins O that spoke on it and the order of rest ⊑ it stands in\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/cell value=\"floor=⊥|ceiling=⊤|origins=O|rest=⊑\"",
+    "bound-lock/1 about=\"the types the arrows of the notation are written in, each with its symbol: an origin is its name and its phase, an act carries its sign, and a state is one of four\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/types value=\"Origin=(o, φ)|Act=s|State=state\"",
+    "bound-lock/1 about=\"what the tuple is read over and at: the lattice L it is given and the resolution r of the reading, neither of them a part of the cell\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/gloss value=\"over L at r\"",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/claim value=\"who=origin|lo=span.lo|hi=span.hi|without=takes\"",
+    "bound-lock/1 at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/moves value=vectors/moves.json",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/named value=string|number|boolean",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/object value=law/D11-the-obligatory",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/renders value=\"FREE=green|REQUIRED=grey|FORBIDDEN=red|CONFLICT=fork\"",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/symbols value=\"object=c|state=state\""
+   ],
+   "regions": {}
+  }
+ },
+ "cases": [
+  {
+   "name": "root:obligations · alphabet@3 · docs/reference.md",
+   "world": "root:obligations",
+   "request": {
+    "region": "alphabet",
+    "at": 3,
+    "shape": "docs/reference.md",
+    "name": "obligations",
+    "reads": [
+     "lang",
+     "prose/*/reference/*",
+     "notation/*"
+    ]
+   },
+   "expected": [
+    "## Alphabet",
+    "",
+    "| symbol | names |",
+    "|---|---|",
+    "| ⊥ | floor |",
+    "| ⊤ | ceiling |",
+    "| O | origins |",
+    "| ⊑ | rest |",
+    "| (o, φ) | Origin |",
+    "| s | Act |",
+    "| state | State |"
+   ]
+  },
+  {
+   "name": "root:topos-node · alphabet@3 · docs/reference.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "alphabet",
+    "at": 3,
+    "shape": "docs/reference.md",
+    "name": "topos-node",
+    "reads": [
+     "lang",
+     "prose/*/reference/*",
+     "notation/*"
+    ]
+   },
+   "expected": [
+    "## ",
+    "",
+    "",
+    "|---|---|",
+    "| ⊥ | floor |",
+    "| ⊤ | ceiling |",
+    "| O | origins |",
+    "| ⊑ | rest |",
+    "| (o, φ) | Origin |",
+    "| s | Act |",
+    "| state | State |"
+   ]
+  }
+ ]
+}

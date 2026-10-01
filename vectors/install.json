@@ -1,0 +1,66 @@
+{
+ "about": [
+  "What the install region renders, asked in the worlds its views ask it, each handed what the region declares it reads."
+ ],
+ "worlds": {
+  "root:obligations": {
+   "lines": [
+    "bound-lock/1 about=\"how a reader installs the package: this verb, then the name its manifest carries\" at=witness:a-door-that-never-said-how-to-install-it by=target form=alphabet measure=id needs=package.json role=writes scope=install value=\"npm install\"",
+    "bound-lock/1 at=policy:manifest by=target form=alphabet measure=id needs=package.json role=writes scope=name shape=package.json value=@lapxo/obligations"
+   ],
+   "regions": {}
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 about=\"how a consumer installs the place\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id needs=package.json role=writes scope=install value=\"npm install\"",
+    "bound-lock/1 at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id needs=package.json role=writes scope=name shape=package.json value=@lapxo/topos-node",
+    "bound-lock/1 at=witness:a-capsule-bundling-a-topos-nobody-released by=target form=alphabet measure=id role=writes scope=uses/topos-node value=sha256:384a74b07eb8c7235e584b2801dbda1d78acd7ef6dac933ab05400a40658c55b"
+   ],
+   "regions": {}
+  }
+ },
+ "cases": [
+  {
+   "name": "root:obligations · install@1 · README.md",
+   "world": "root:obligations",
+   "request": {
+    "region": "install",
+    "at": 1,
+    "shape": "README.md",
+    "name": "obligations",
+    "reads": [
+     "install",
+     "name",
+     "uses/*",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "```bash",
+    "npm install @lapxo/obligations",
+    "```"
+   ]
+  },
+  {
+   "name": "root:topos-node · install@1 · README.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "install",
+    "at": 1,
+    "shape": "README.md",
+    "name": "topos-node",
+    "reads": [
+     "install",
+     "name",
+     "uses/*",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "```text",
+    "uses/topos-node sha256:384a74b07eb8c7235e584b2801dbda1d78acd7ef6dac933ab05400a40658c55b",
+    "```"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,61 @@
+{
+ "about": [
+  "What the idea region renders, asked in the worlds its views ask it, each handed what the region declares it reads."
+ ],
+ "worlds": {
+  "root:obligations": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it, and a place that names no language has no prose\" at=witness:a-capsule-that-guessed-the-language-by-the-shape-of-a-path by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"Every quantity a system answers for has two marks on one scale. The floor is what must hold, the ceiling is what may hold, and the pair is a cell. Two origins that touch one cell and whose marks meet make information; two whose marks do not meet make a fork that no average can close.\\n\\nFour words carry the whole library. A floor, a ceiling, an origin and an epoch. A price is the distance between the marks, a state is where they stand, a verdict is what an origin found, a horizon is what no origin has reached, and none of them is a new idea: each is read off those four.\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/idea value=present",
+    "bound-lock/1 about=\"The idea\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=text role=writes scope=prose/en/idea/heading value=lock"
+   ],
+   "regions": {}
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=lang value=en"
+   ],
+   "regions": {}
+  }
+ },
+ "cases": [
+  {
+   "name": "root:obligations · idea@3 · README.md",
+   "world": "root:obligations",
+   "request": {
+    "region": "idea",
+    "at": 3,
+    "shape": "README.md",
+    "name": "obligations",
+    "reads": [
+     "lang",
+     "prose/*/idea",
+     "prose/*/idea/*",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "## The idea",
+    "",
+    "Every quantity a system answers for has two marks on one scale. The floor is what must hold, the ceiling is what may hold, and the pair is a cell. Two origins that touch one cell and whose marks meet make information; two whose marks do not meet make a fork that no average can close.\n\nFour words carry the whole library. A floor, a ceiling, an origin and an epoch. A price is the distance between the marks, a state is where they stand, a verdict is what an origin found, a horizon is what no origin has reached, and none of them is a new idea: each is read off those four."
+   ]
+  },
+  {
+   "name": "root:topos-node · idea@3 · README.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "idea",
+    "at": 3,
+    "shape": "README.md",
+    "name": "topos-node",
+    "reads": [
+     "lang",
+     "prose/*/idea",
+     "prose/*/idea/*",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  }
+ ]
+}

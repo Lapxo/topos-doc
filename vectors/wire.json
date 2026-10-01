@@ -1,0 +1,220 @@
+{
+ "about": "The wire region over topos: the page its rules, tokens, reference and corpus lines ask for, at the resolution a view asks it.",
+ "worlds": {
+  "root:topos": {
+   "lines": [
+    "bound-lock/1 at=witness:a-topos-that-was-not-a-place by=owner form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"The wire\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/heading value=lock",
+    "bound-lock/1 about=\"A lock is a file of lines, and a line is all that passes between two implementations: one line of {encoding} text, a header and its fields. This page is the grammar of {header}. The functions of `topos/wire` are its reference, and the corpus below holds them to it.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/lead value=lock",
+    "bound-lock/1 about=\"The header\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/header/heading value=lock",
+    "bound-lock/1 about=\"A line begins with its header, {header}: the name of the protocol, a slash and its version. A line without a header is refused. A version this reader does not know is held, not refused, because it is the future arriving.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/header value=lock",
+    "bound-lock/1 about=Fields at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/fields/heading value=lock",
+    "bound-lock/1 about=\"After the header come the fields, each `key=value`, apart by runs of spaces. A key appears once, and a line that names one twice is refused. A value `-` is absence, and the field reads as unwritten. A field no reader knows rides through untouched.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/fields value=lock",
+    "bound-lock/1 about=Quoting at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/quoting/heading value=lock",
+    "bound-lock/1 about=\"A value that holds a space, an equals sign, a double quote, a backslash or a newline is written in double quotes. Inside them `\\\\\\\"` is a quote, `\\\\\\\\` a backslash and `\\\\n` a newline, and any other escape is refused. A value that needs no quotes never gets them.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/quoting value=lock",
+    "bound-lock/1 about=Bytes at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/encoding/heading value=lock",
+    "bound-lock/1 about=\"A line is {encoding} bytes, and nothing normalises them: two spellings of one letter are two scopes until a line says they are one.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/encoding value=lock",
+    "bound-lock/1 about=Order at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/order/heading value=lock",
+    "bound-lock/1 about=\"Every order the wire makes is the order of {encoding} bytes, never a host's: the keys of a canonical line, and the members of every set a value holds. A character beyond the basic plane sorts above every character within it, where a host counting in pairs of sixteen bits sorts it below.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/order value=lock",
+    "bound-lock/1 about=\"One line\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/newline/heading value=lock",
+    "bound-lock/1 about=\"A line is one line. A newline inside a value is written `\\\\n`, and a file of lines ends every line with a newline.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/newline value=lock",
+    "bound-lock/1 about=\"Canonical and parse\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/canonical/heading value=lock",
+    "bound-lock/1 about=\"The canonical line is the header, then every field in the byte order of its key, one space apart, each value quoted only where it must be. Parsing a canonical line and writing it again gives back the same bytes. The digest of a line is the {hash} of those bytes, and a signature travels beside the bytes it signs, never inside them.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/canonical value=lock",
+    "bound-lock/1 about=\"Inside a value\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/values/heading value=lock",
+    "bound-lock/1 about=\"The kernel never looks inside a value; each value has its own grammar, one function each in `topos/wire`. An alphabet is members apart by `|`, with `\\\\|` and `\\\\\\\\` escaped, `not:` before them to forbid and `none` for no member at all. Fields are `key=value` members of an alphabet, parted at the first `=`. A scope is steps apart by `/`, every step kept. A region is `name@resolution`, its resolution digits or `*`. Each function reads its text and writes it back canonical, and what it writes reads back the same.\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/values value=lock",
+    "bound-lock/1 about=\"The reference\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/reference/heading value=lock",
+    "bound-lock/1 about=\"| function | as the language reads it |\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/reference/table value=lock",
+    "bound-lock/1 about=\"The corpus\" at=policy:topos/wire-page by=target form=alphabet measure=text role=writes scope=prose/en/wire/corpus/heading value=lock",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/lead value=header|encoding",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/header value=header",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/encoding value=encoding",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/order value=encoding",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=form/template/wire/canonical value=hash",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=wire/rules value=header|fields|quoting|encoding|order|newline|canonical|values",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=wire/tokens value=\"header=bound-lock/1|encoding=UTF-8|hash=sha256\"",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=wire/reference value=parse|canonical|signedBytes|byBytes|alphabet|fields|steps|atResolution",
+    "bound-lock/1 at=policy:topos/wire-page by=target form=alphabet measure=id role=writes scope=wire/corpus value=spec/bound-lock-1|spec/fold|spec/values"
+   ],
+   "regions": {
+    "source": {
+     "lines": [],
+     "receipts": [
+      "bound-lock/1 at=place:src/wire/line.ts by=reader form=alphabet measure=text role=reads scope=source/signature/PROTOCOL value=PROTOCOL",
+      "bound-lock/1 at=place:src/wire/line.ts by=reader form=alphabet measure=text role=reads scope=source/signature/byBytes value=\"byBytes(a: string, b: string): number\"",
+      "bound-lock/1 at=place:src/wire/line.ts by=reader form=alphabet measure=text role=reads scope=source/signature/canonical value=\"canonical(fields: Readonly<Record<string, string>>, version = '1'): string\"",
+      "bound-lock/1 at=place:src/wire/line.ts by=reader form=alphabet measure=text role=reads scope=source/signature/signedBytes value=\"signedBytes(fields: Readonly<Record<string, string>>, version = '1'): string\"",
+      "bound-lock/1 at=place:src/wire/line.ts by=reader form=alphabet measure=text role=reads scope=source/signature/parse value=\"parse(text: string): Outcome<Line>\"",
+      "bound-lock/1 at=place:src/wire/grammar.ts by=reader form=alphabet measure=text role=reads scope=source/signature/alphabet value=\"alphabet(text: string): Alphabet; alphabet(value: Alphabet): string\"",
+      "bound-lock/1 at=place:src/wire/grammar.ts by=reader form=alphabet measure=text role=reads scope=source/signature/fields value=\"fields(text: string): readonly Field[]; fields(value: readonly Field[]): string\"",
+      "bound-lock/1 at=place:src/wire/grammar.ts by=reader form=alphabet measure=text role=reads scope=source/signature/steps value=\"steps(text: string): readonly string[]; steps(value: readonly string[]): string\"",
+      "bound-lock/1 at=place:src/wire/grammar.ts by=reader form=alphabet measure=text role=reads scope=source/signature/atResolution value=\"atResolution(text: string): Resolution; atResolution(value: Resolution): string\""
+     ]
+    },
+    "vectors": {
+     "lines": [],
+     "receipts": [
+      "bound-lock/1 at=place: by=reader form=alphabet measure=pass role=reads scope=vector/spec/bound-lock-1 value=pass",
+      "bound-lock/1 at=place: by=reader form=alphabet measure=pass role=reads scope=vector/spec/fold value=pass",
+      "bound-lock/1 at=place: by=reader form=alphabet measure=pass role=reads scope=vector/spec/values value=pass"
+     ]
+    }
+   }
+  },
+  "root:topos-node": {
+   "lines": [
+    "bound-lock/1 about=\"the language the place-s prose is written in: a page asks for its prose in it\" at=witness:a-topos-that-was-not-a-place by=target form=alphabet measure=id role=writes scope=lang value=en",
+    "bound-lock/1 about=\"the formulas the first resolution writes, in the order a reader looks for them: the object and its poles, where a cell is information, what no act raises, the sign and phase a claim carries, where a signature lives, the quarter turn and the state\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/formulas value=law/D11-the-obligatory|law/A1-encounter|law/A7-freedom-conserved|law/T49-amplitude-has-sign-and-phase|law/T95-signatures-live-where-they-are-signed|law/T87-the-quarter-turn|law/D3-state",
+    "bound-lock/1 about=\"the four states in the order the object decides them: bounds that cross are a conflict whatever the claims, one origin is required, claims that do not meet are a conflict, and claims that meet are free where they fit the bounds and forbidden where they do not\" at=witness:a-state-table-in-another-order-than-the-code by=target form=alphabet measure=id role=writes scope=notation/states value=\"bounds that cross=CONFLICT|one origin=REQUIRED|claims that do not meet=CONFLICT|claims that meet and fit the bounds=FREE|claims that meet outside the bounds=FORBIDDEN\"",
+    "bound-lock/1 about=\"the glyphs the notation joins its symbols with: the brackets of the tuple, membership, the product and the arrow of a signature, and equivalence\" at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/glue value=\"open=⟨|close=⟩|member=∈|product=×|maps=→|iff=⟺\"",
+    "bound-lock/1 about=\"the members of the object the notation writes, in two pairs: its value, the floor ⊥ and the ceiling ⊤, both read and never stored, and its relations, the origins O that spoke on it and the order of rest ⊑ it stands in\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/cell value=\"floor=⊥|ceiling=⊤|origins=O|rest=⊑\"",
+    "bound-lock/1 about=\"the types the arrows of the notation are written in, each with its symbol: an origin is its name and its phase, an act carries its sign, and a state is one of four\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/types value=\"Origin=(o, φ)|Act=s|State=state\"",
+    "bound-lock/1 about=\"what the tuple is read over and at: the lattice L it is given and the resolution r of the reading, neither of them a part of the cell\" at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/gloss value=\"over L at r\"",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/claim value=\"who=origin|lo=span.lo|hi=span.hi|without=takes\"",
+    "bound-lock/1 at=witness:an-object-that-stored-its-poles by=target form=alphabet measure=id role=writes scope=notation/moves value=vectors/moves.json",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/named value=string|number|boolean",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/object value=law/D11-the-obligatory",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/renders value=\"FREE=green|REQUIRED=grey|FORBIDDEN=red|CONFLICT=fork\"",
+    "bound-lock/1 at=witness:the-root-spoke-for-the-place by=target form=alphabet measure=id role=writes scope=notation/symbols value=\"object=c|state=state\""
+   ],
+   "regions": {}
+  }
+ },
+ "cases": [
+  {
+   "name": "root:topos · wire@3 · docs/wire.md",
+   "world": "root:topos",
+   "request": {
+    "region": "wire",
+    "at": 3,
+    "shape": "docs/wire.md",
+    "name": "topos",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/wire/*",
+     "prose/*/wire/*/*",
+     "wire/*",
+     "region/source",
+     "region/vectors",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "# The wire",
+    "",
+    "A lock is a file of lines, and a line is all that passes between two implementations: one line of UTF-8 text, a header and its fields. This page is the grammar of bound-lock/1. The functions of `topos/wire` are its reference, and the corpus below holds them to it.",
+    "",
+    "## The header",
+    "",
+    "A line begins with its header, bound-lock/1: the name of the protocol, a slash and its version. A line without a header is refused. A version this reader does not know is held, not refused, because it is the future arriving.",
+    "",
+    "## Fields",
+    "",
+    "After the header come the fields, each `key=value`, apart by runs of spaces. A key appears once, and a line that names one twice is refused. A value `-` is absence, and the field reads as unwritten. A field no reader knows rides through untouched.",
+    "",
+    "## Quoting",
+    "",
+    "A value that holds a space, an equals sign, a double quote, a backslash or a newline is written in double quotes. Inside them `\\\"` is a quote, `\\\\` a backslash and `\\n` a newline, and any other escape is refused. A value that needs no quotes never gets them.",
+    "",
+    "## Bytes",
+    "",
+    "A line is UTF-8 bytes, and nothing normalises them: two spellings of one letter are two scopes until a line says they are one.",
+    "",
+    "## Order",
+    "",
+    "Every order the wire makes is the order of UTF-8 bytes, never a host's: the keys of a canonical line, and the members of every set a value holds. A character beyond the basic plane sorts above every character within it, where a host counting in pairs of sixteen bits sorts it below.",
+    "",
+    "## One line",
+    "",
+    "A line is one line. A newline inside a value is written `\\n`, and a file of lines ends every line with a newline.",
+    "",
+    "## Canonical and parse",
+    "",
+    "The canonical line is the header, then every field in the byte order of its key, one space apart, each value quoted only where it must be. Parsing a canonical line and writing it again gives back the same bytes. The digest of a line is the sha256 of those bytes, and a signature travels beside the bytes it signs, never inside them.",
+    "",
+    "## Inside a value",
+    "",
+    "The kernel never looks inside a value; each value has its own grammar, one function each in `topos/wire`. An alphabet is members apart by `|`, with `\\|` and `\\\\` escaped, `not:` before them to forbid and `none` for no member at all. Fields are `key=value` members of an alphabet, parted at the first `=`. A scope is steps apart by `/`, every step kept. A region is `name@resolution`, its resolution digits or `*`. Each function reads its text and writes it back canonical, and what it writes reads back the same.",
+    "",
+    "## The reference",
+    "",
+    "| function | as the language reads it |\n|---|---|\n| `parse` | `parse(text: string): Outcome<Line>` |\n| `canonical` | `canonical(fields: Readonly<Record<string, string>>, version = '1'): string` |\n| `signedBytes` | `signedBytes(fields: Readonly<Record<string, string>>, version = '1'): string` |\n| `byBytes` | `byBytes(a: string, b: string): number` |\n| `alphabet` | `alphabet(text: string): Alphabet; alphabet(value: Alphabet): string` |\n| `fields` | `fields(text: string): readonly Field[]; fields(value: readonly Field[]): string` |\n| `steps` | `steps(text: string): readonly string[]; steps(value: readonly string[]): string` |\n| `atResolution` | `atResolution(text: string): Resolution; atResolution(value: Resolution): string` |",
+    "",
+    "## The corpus",
+    "",
+    "- `vector/spec/bound-lock-1` · pass\n- `vector/spec/fold` · pass\n- `vector/spec/values` · pass"
+   ]
+  },
+  {
+   "name": "root:topos · wire@1 · docs/wire.md",
+   "world": "root:topos",
+   "request": {
+    "region": "wire",
+    "at": 1,
+    "shape": "docs/wire.md",
+    "name": "topos",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/wire/*",
+     "prose/*/wire/*/*",
+     "wire/*",
+     "region/source",
+     "region/vectors",
+     "form/page/**"
+    ]
+   },
+   "expected": [
+    "# The wire",
+    "",
+    "A lock is a file of lines, and a line is all that passes between two implementations: one line of UTF-8 text, a header and its fields. This page is the grammar of bound-lock/1. The functions of `topos/wire` are its reference, and the corpus below holds them to it."
+   ]
+  },
+  {
+   "name": "root:topos-node · wire@3 · docs/wire.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "wire",
+    "at": 3,
+    "shape": "docs/wire.md",
+    "name": "topos",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/wire/*",
+     "prose/*/wire/*/*",
+     "wire/*",
+     "region/source",
+     "region/vectors",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "name": "root:topos-node · wire@1 · docs/wire.md",
+   "world": "root:topos-node",
+   "request": {
+    "region": "wire",
+    "at": 1,
+    "shape": "docs/wire.md",
+    "name": "topos",
+    "reads": [
+     "lang",
+     "form/prose/**",
+     "form/template/**",
+     "prose/*/wire/*",
+     "prose/*/wire/*/*",
+     "wire/*",
+     "region/source",
+     "region/vectors",
+     "form/page/**"
+    ]
+   },
+   "expected": []
+  }
+ ]
+}
