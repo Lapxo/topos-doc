@@ -1,6 +1,6 @@
 # Reference
 
-38 regions, each read off the lines its descriptor declares and nothing else; it reaches none beyond them.
+39 regions, each read off the lines its descriptor declares and nothing else; it reaches none beyond them.
 
 | region | reads | writes |
 |---|---|---|
@@ -22,9 +22,10 @@
 | hero | lang · form/prose/** · form/template/** · prose/*/what · prose/*/badge/* · docs/logo · docs/badges · name · notation/renders · sources/* · dependencies · version · license · engines · cites/* · region/cases · region/state · docs/tagline · form/style/** · audit/wire/badges/world | its leaf |
 | how-they-rest | lang · form/prose/** · form/template/** · prose/*/rests/* · prose/*/door/* · name · dependencies · uses/* · dep/** · */name · */dependencies | its leaf |
 | idea | lang · prose/*/idea · prose/*/idea/* · form/page/** | its leaf |
-| install | install · name · uses/* · form/page/** | its leaf |
+| install | install · name · uses/* · sources/* · host/resolve · form/page/** | its leaf |
 | learn | lang · form/prose/** · form/template/** · prose/*/learn/** · prose/*/cell/* · prose/*/example/* · prose/*/apart · notation/* · view/* · examples/* · region/examples · region/source · region/offers · region/laws · docs/learn · form/runtime/*/run · prose/*/figure/learn/* · form/style/** · form/page/** | its leaf |
 | license | license · form/page/** | its leaf |
+| line | sources/* · uses/* · host/resolve · form/page/** | its leaf |
 | media | form/template/** · form/style/** · form/page/** · media/** | its leaf |
 | notation | lang · form/prose/** · prose/*/notation/* · prose/*/reference/* · notation/* · region/laws · region/offers · region/source · form/page/** | its leaf |
 | open | lang · form/prose/** · form/template/** · prose/*/open/* · samples/* · region/laws · region/state · form/page/** | its leaf |

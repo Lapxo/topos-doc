@@ -1,7 +1,9 @@
-import { found, of, resolved, value, type Asked } from '../helpers/capsule.ts';
+import { found, resolved, value, type Asked } from '../helpers/capsule.ts';
+import { render as line } from './line.ts';
 
-/** How a place is taken in: a world by the one line that pins it, as its own lock pins it; anything else by its installer and its name, as one command. */
+/** How a place is taken in: a world by the two lines that pin it; a package by its installer and its name. */
 export const render = (asked: Asked): readonly string[] => {
-  const [pin, how, name] = [found(asked, `uses/${asked.name}`), value(asked, 'install'), value(asked, 'name')];
-  return resolved(asked, pin !== undefined ? ['```text', `${of(pin, 'scope')} ${of(pin, 'value')}`, '```'] : how === undefined || name === undefined ? [] : ['```bash', `${how} ${name}`, '```']);
+  if (found(asked, `uses/${asked.name}`) !== undefined || found(asked, `sources/${asked.name}`) !== undefined) return line(asked);
+  const [how, name] = [value(asked, 'install'), value(asked, 'name')];
+  return resolved(asked, how === undefined || name === undefined ? [] : ['```bash', `${how} ${name}`, '```']);
 };
