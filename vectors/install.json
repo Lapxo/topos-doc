@@ -53,13 +53,20 @@
      "install",
      "name",
      "uses/*",
+     "sources/*",
+     "host/resolve",
      "form/page/**"
     ]
    },
    "expected": [
-    "```text",
-    "uses/topos-node sha256:384a74b07eb8c7235e584b2801dbda1d78acd7ef6dac933ab05400a40658c55b",
-    "```"
+    "## Line",
+    "",
+    "Add to your lock:",
+    "sources/topos-node value=github:Lapxo/topos-node",
+    "uses/topos-node sha256:<release digest>",
+    "https://github.com/Lapxo/topos-node/releases",
+    "Fetch the release asset, verify its sha256 equals the uses/ line, place it in bound/cas/blobs/. Fold: its pages appear.",
+    "open: line/install needs=host/resolve — when bound resolves sources/ itself, the fetch line leaves the page by fold."
    ]
   }
  ]
