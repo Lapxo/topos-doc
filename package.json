@@ -1,6 +1,6 @@
 {
   "name": "@lapxo/topos-doc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The pages a place is read through, rendered from its lines and the receipts of its regions: its door, its guide, its reference, its figures and its citation.",
   "type": "module",
   "license": "MIT",
