@@ -29,7 +29,10 @@ export const tuple = (asked: Asked): string | undefined => {
   const module = moduleOfObject(asked, held);
   const carries = new Set(alphabet(module === undefined ? '' : receiptValue(asked, 'source', 'source/carries', module) ?? '').members);
   const [symbols, gloss] = [new Map(pairs(asked, 'notation/symbols')), listed(asked, 'notation/gloss')];
-  return `${symbols.get('object')} = ${glyph(asked, 'open')}${pairs(asked, 'notation/cell').filter(([member]) => carries.has(member)).map(([, sym]) => sym).join(', ')}${glyph(asked, 'close')}${gloss.length ? `        ${gloss.join('     ')}` : ''}`;
+  const members = pairs(asked, 'notation/cell');
+  const shown = (carries.size ? members.filter(([member]) => carries.has(member)) : members).map(([, sym]) => sym);
+  if (!shown.length) return undefined;
+  return `${symbols.get('object')} = ${glyph(asked, 'open')}${shown.join(', ')}${glyph(asked, 'close')}${gloss.length ? `        ${gloss.join('     ')}` : ''}`;
 };
 
 /** The object's own formulas, aligned where each is cut: those its notation lists, else those of the laws it rests on and its own. */

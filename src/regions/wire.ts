@@ -14,6 +14,6 @@ export const render = (asked: Asked): readonly string[] => {
   const reference = names.map((name) => `| \`${name}\` | \`${cellText(signed(name))}\` |`);
   return resolved(asked, [`# ${prose(asked, 'wire/heading') ?? ''}`, '', say(asked, 'wire/lead', tokens),
     ...rules.flatMap((rule) => ['', ...titled(asked, `wire/${rule}`, [say(asked, `wire/${rule}`, tokens)])]),
-    '', ...titled(asked, 'wire/reference', [[prose(asked, 'wire/reference/table') ?? '', '|---|---|', ...reference].join('\n')]),
-    '', ...titled(asked, 'wire/corpus', [corpus.map((name) => `- \`vector/${name}\` · ${held(name)}`).join('\n')])]);
+    ...(names.length ? ['', ...titled(asked, 'wire/reference', [[prose(asked, 'wire/reference/table') ?? '', '|---|---|', ...reference].join('\n')])] : []),
+    ...(corpus.length ? ['', ...titled(asked, 'wire/corpus', [corpus.map((name) => `- \`vector/${name}\` · ${held(name)}`).join('\n')])] : [])]);
 };

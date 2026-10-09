@@ -11,3 +11,4 @@ export * from './laws.ts';
 export * from './notation.ts';
 export * from './prose.ts';
 export * from './records.ts';
+export * from './shown.ts';
