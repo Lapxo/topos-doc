@@ -27,12 +27,50 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           version="v$(node -p "require('./package.json').version")"
+          mkdir -p release-assets
+          gh release download "$version" --repo Lapxo/topos-doc --pattern '79f67c38e9533f08bea37944cbf9eeef272b415fa798de89f82f4fccfcc4ca54' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-doc --pattern '79f67c38e9533f08bea37944cbf9eeef272b415fa798de89f82f4fccfcc4ca54' --dir release-assets
+          printf '%s  %s\n' '79f67c38e9533f08bea37944cbf9eeef272b415fa798de89f82f4fccfcc4ca54' 'release-assets/79f67c38e9533f08bea37944cbf9eeef272b415fa798de89f82f4fccfcc4ca54' | sha256sum -c -
+          gh release download "$version" --repo Lapxo/topos-doc --pattern 'd61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-doc --pattern 'd61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6' --dir release-assets
+          printf '%s  %s\n' 'd61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6' 'release-assets/d61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6' | sha256sum -c -
+          gh release download "$version" --repo Lapxo/topos-doc --pattern 'archive-profile.mjs' --dir release-assets || gh release download "${version}-inputs" --repo Lapxo/topos-doc --pattern 'archive-profile.mjs' --dir release-assets
+          printf '%s  %s\n' 'b29b48db2b4d9633a095765ae65e99ca8c14aae10a76735f006fb728a23e5aaa' 'release-assets/archive-profile.mjs' | sha256sum -c -
+          npx --yes --package esbuild@0.28.2 esbuild src/index.ts --bundle --platform=node --format=esm --outfile="$RUNNER_TEMP/runtime-index.js"
+          printf '%s  %s\n' '76aac0e38a47ea3d94014ff8fdb2d91c0571a37418ed245b7339d8269f186a79' "$RUNNER_TEMP/runtime-index.js" | sha256sum -c -
+          node release-assets/archive-profile.mjs 'release-assets/159ce79a262e08840b8e79bc7279abaef958e369115062f937fd7bf3bee9bf1e' 'sha256:159ce79a262e08840b8e79bc7279abaef958e369115062f937fd7bf3bee9bf1e' capsule.bound 'release-assets/d61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6' dist/index.js "$RUNNER_TEMP/runtime-index.js" >&2
           asset="$(npm pack --silent)"
           test -f "$asset"
           expected="$(sha256sum "$asset")"
           if ! gh release view "$version" >/dev/null 2>&1; then
-            gh release create "$version" "$asset" --title "$version" --notes "$version"
+            gh release create "$version" "$asset" 'release-assets/79f67c38e9533f08bea37944cbf9eeef272b415fa798de89f82f4fccfcc4ca54' 'release-assets/159ce79a262e08840b8e79bc7279abaef958e369115062f937fd7bf3bee9bf1e' 'release-assets/d61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6' 'release-assets/archive-profile.mjs' --title "$version" --notes "$version"
           fi
           gh release download "$version" --pattern "$(basename "$asset")" --dir "$RUNNER_TEMP/release-back"
           actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$asset")")"
           test "${expected%% *}" = "${actual%% *}"
+          extra='release-assets/79f67c38e9533f08bea37944cbf9eeef272b415fa798de89f82f4fccfcc4ca54'
+          test -f "$extra"
+          test "$(basename "$extra")" != "$(basename "$asset")"
+          extra_expected="$(sha256sum "$extra")"
+          gh release download "$version" --pattern "$(basename "$extra")" --dir "$RUNNER_TEMP/release-back"
+          extra_actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$extra")")"
+          test "${extra_expected%% *}" = "${extra_actual%% *}"
+          extra='release-assets/159ce79a262e08840b8e79bc7279abaef958e369115062f937fd7bf3bee9bf1e'
+          test -f "$extra"
+          test "$(basename "$extra")" != "$(basename "$asset")"
+          extra_expected="$(sha256sum "$extra")"
+          gh release download "$version" --pattern "$(basename "$extra")" --dir "$RUNNER_TEMP/release-back"
+          extra_actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$extra")")"
+          test "${extra_expected%% *}" = "${extra_actual%% *}"
+          extra='release-assets/d61f6b03f1d1eae7e8249110dcdf481ca2ba2ce00922e278e9311cc2ef4a6bb6'
+          test -f "$extra"
+          test "$(basename "$extra")" != "$(basename "$asset")"
+          extra_expected="$(sha256sum "$extra")"
+          gh release download "$version" --pattern "$(basename "$extra")" --dir "$RUNNER_TEMP/release-back"
+          extra_actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$extra")")"
+          test "${extra_expected%% *}" = "${extra_actual%% *}"
+          extra='release-assets/archive-profile.mjs'
+          test -f "$extra"
+          test "$(basename "$extra")" != "$(basename "$asset")"
+          extra_expected="$(sha256sum "$extra")"
+          gh release download "$version" --pattern "$(basename "$extra")" --dir "$RUNNER_TEMP/release-back"
+          extra_actual="$(sha256sum "$RUNNER_TEMP/release-back/$(basename "$extra")")"
+          test "${extra_expected%% *}" = "${extra_actual%% *}"
