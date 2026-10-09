@@ -10,7 +10,8 @@ export const render = (asked: Asked): readonly string[] => {
   const away = cell?.rest?.who;
   const held = cell === undefined ? undefined : SPANS.inhabited(cell.held) ? cell.held : cell.rest?.held;
   const said = cell === undefined ? [] : [held === undefined ? '' : say(asked, 'figure/fold/together', { ...held, state: (named[1] ?? '').toLowerCase() }),
-    away === undefined || held === undefined ? '' : say(asked, 'figure/fold/apart', { who: away, state: cell.state.toLowerCase() })].filter(Boolean);
+    away === undefined || held === undefined ? '' : say(asked, 'figure/fold/apart', { who: away, state: cell.state.toLowerCase() }),
+    away === undefined || held === undefined || !Number.isFinite(g.back) ? '' : say(asked, 'figure/fold/back', { ...held })].filter(Boolean);
   const x = (v: number): number => (cell === undefined ? NaN : between(v, [cell.hull.lo - g.pad, cell.hull.hi + g.pad], [g.margin, wide - g.margin]));
   const rows = cell === undefined ? [] : cell.claims.filter((claim) => claim.origin !== away);
   const out = cell?.claims.find((claim) => claim.origin === away);
@@ -22,9 +23,9 @@ export const render = (asked: Asked): readonly string[] => {
     `<svg xmlns="http://www.w3.org/2000/svg"${attrs({ viewBox: px(wide) && px(height) ? `0 0 ${px(wide)} ${px(height)}` : undefined, width: px(wide), height: px(height) })} role="img" aria-label="${escaped(listOf(asked, said))}">`,
     ...style([css([['text', { ...font(asked, 'text', 'text'), fill: painted(asked, 'text').colour }]])], css([['text', { fill: painted(asked, 'text-dark').colour }]])),
     `<line${attrs({ x1: px(x(cell.hull.lo)), y1: px((rows.length + 1) * g.row + g.top), x2: px(x(cell.hull.hi)), y2: px((rows.length + 1) * g.row + g.top), stroke: claimed?.colour })}/>`,
-    ...rows.map((claim, i) => bar(claim.span.lo, claim.span.hi, g.top + i * g.row, `<animate attributeName="x"${attrs({ from: px(x(claim.span.lo) + (i & 1 ? g.slide : -g.slide)), to: px(x(claim.span.lo)), dur: secs(g.meet) })} fill="freeze"/>${out ? turn(claimed?.colour, apart?.colour, g.set) : ''}`)),
-    bar(held.lo, held.hi, g.top + rows.length * g.row, `${turn(claimed?.colour, met?.colour, g.meet)}${out ? turn(met?.colour, apart?.colour, g.set) : ''}`),
-    ...(out ? [bar(out.span.lo, out.span.hi, g.top + (rows.length + 1) * g.row + g.gap, `<animate attributeName="x"${attrs({ values: px(x(held.lo)) && px(x(out.span.lo)) ? `${px(x(held.lo))};${px(x(held.lo))};${px(x(out.span.lo))}` : undefined, keyTimes: Number.isFinite(g.fall / g.set) ? `0;${(g.fall / g.set).toFixed(1)};1` : undefined, dur: secs(g.set) })} fill="freeze"/>${turn(claimed?.colour, apart?.colour, g.set)}`)] : []),
+    ...rows.map((claim, i) => bar(claim.span.lo, claim.span.hi, g.top + i * g.row, `<animate attributeName="x"${attrs({ from: px(x(claim.span.lo) + (i & 1 ? g.slide : -g.slide)), to: px(x(claim.span.lo)), dur: secs(g.meet) })} fill="freeze"/>${out ? turn(claimed?.colour, apart?.colour, g.set) : ''}${out && Number.isFinite(g.back) ? turn(apart?.colour, claimed?.colour, g.back) : ''}`)),
+    bar(held.lo, held.hi, g.top + rows.length * g.row, `${turn(claimed?.colour, met?.colour, g.meet)}${out ? turn(met?.colour, apart?.colour, g.set) : ''}${out && Number.isFinite(g.back) ? turn(apart?.colour, met?.colour, g.back) : ''}`),
+    ...(out ? [bar(out.span.lo, out.span.hi, g.top + (rows.length + 1) * g.row + g.gap, `<animate attributeName="x"${attrs({ values: px(x(held.lo)) && px(x(out.span.lo)) ? `${px(x(held.lo))};${px(x(held.lo))};${px(x(out.span.lo))}` : undefined, keyTimes: Number.isFinite(g.fall / g.set) ? `0;${(g.fall / g.set).toFixed(1)};1` : undefined, dur: secs(g.set) })} fill="freeze"/>${turn(claimed?.colour, apart?.colour, g.set)}${Number.isFinite(g.back) ? `<animate attributeName="opacity" values="1;1;0"${attrs({ keyTimes: Number.isFinite(g.set / g.back) ? `0;${(g.set / g.back).toFixed(1)};1` : undefined, dur: secs(g.back) })} fill="freeze"/>` : ''}`)] : []),
     ...said.map((one, i) => `<text${attrs({ x: px(g.margin), y: px(height - (said.length - i) * g.say + g.top) })}>${escaped(one)}${fade(g.speak + i * g.meet)}</text>`),
     '</svg>'], listOf(asked, said), 'figure/fold', ((caption) => (caption ? [sentence(asked, caption)] : []))(cell === undefined ? '' : captioned(asked, cell)));
 };

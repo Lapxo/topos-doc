@@ -1,5 +1,6 @@
 import { of, value, type Asked } from '@lapxo/topos/capsule';
 import { numeral } from './asked.ts';
+import { escaped } from './prose.ts';
 
 type Said = Readonly<Record<string, string | undefined>>;
 const stands = (said: Said): readonly (readonly [string, string])[] => Object.entries(said).filter((pair): pair is [string, string] => Boolean(pair[1]));
@@ -10,7 +11,7 @@ export const look = (asked: Asked, key: string): string | undefined => value(ask
 export const spacing = (asked: Asked, figure: string): Readonly<Record<string, number>> => Object.fromEntries(asked.lines.filter((line) => of(line, 'scope').startsWith(`form/style/${figure}/`))
   .map((line) => [of(line, 'scope').slice(`form/style/${figure}/`.length), numeral(of(line, 'value'))]));
 /** Attributes and style rules written only for what stands: a missing line renders without its attribute, never with a value of the world's own; a number that is none is no attribute. */
-export const attrs = (said: Said): string => stands(said).map(([k, v]) => ` ${k}="${v}"`).join('');
+export const attrs = (said: Said): string => stands(said).map(([k, v]) => ` ${k}="${escaped(v)}"`).join('');
 export const css = (rules: readonly (readonly [string, Said])[]): string => rules.map(([at, said]) => [at, stands(said).map(([k, v]) => `${k}:${v}`).join(';')] as const).filter(([, body]) => body).map(([at, body]) => `${at}{${body}}`).join('');
 export const between = (v: number, [a, b]: readonly [number, number], [c, d]: readonly [number, number]): number => c + ((v - a) / (b - a)) * (d - c);
 export const px = (n: number): string | undefined => (Number.isFinite(n) ? String(numeral(n.toFixed(1))) : undefined);

@@ -1,6 +1,7 @@
 {
   "name": "@lapxo/topos-doc",
-  "version": "0.1.2",
+  "version": "0.1.3",
+  "private": true,
   "description": "The pages a place is read through, rendered from its lines and the receipts of its regions: its door, its guide, its reference, its figures and its citation.",
   "type": "module",
   "license": "MIT",
@@ -30,13 +31,19 @@
     "dist",
     "README.md",
     "LICENSE",
-    "TARGET.bound"
+    "TARGET.bound",
+    "receipts.bound"
   ],
   "scripts": {
-    "build": "tsc --build"
+    "build": "tsc --build",
+    "test": "node --test test/*.test.ts"
   },
   "dependencies": {
     "@lapxo/obligations": "^0.3.5",
-    "@lapxo/topos": "0.1.2"
+    "@lapxo/topos": "0.1.12"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "typescript": "5.9.3"
   }
 }

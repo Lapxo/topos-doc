@@ -3,7 +3,7 @@ import { alphabet } from '@lapxo/topos/wire';
 import { receiptValue } from './asked.ts';
 import { say, sentence, words } from './language.ts';
 
-export type Sample = { readonly held: boolean; readonly at: string | undefined; readonly about: readonly string[] | undefined; readonly title: string | undefined; readonly brief: string | undefined };
+export type Sample = { readonly recorded: boolean; readonly at: string | undefined; readonly about: readonly string[] | undefined; readonly title: string | undefined; readonly brief: string | undefined };
 
 export const laws = (asked: Asked): readonly Handed[] => regionLines(asked, 'laws');
 export const offers = (asked: Asked): readonly Handed[] => regionLines(asked, 'offers');
@@ -20,11 +20,12 @@ export const resting = (asked: Asked, scope: string): readonly Handed[] => offer
 export const moduleOf = (asked: Asked, offer: Handed): string | undefined => alphabet(of(offer, 'needs')).members
   .find((need) => receiptValue(asked, 'source', 'source/carries', need) !== undefined || receipts(asked, 'source').some((one) => placeOf(one) === need));
 
-/** A law's sample on one side, read as the reader of the place said it: whether it holds fields, its about, title and brief. */
+/** A declared sample's recorded metadata; its presence says nothing about whether a law holds. */
 export const sample = (asked: Asked, law: Handed, side: string): Sample => {
-  const at = alphabet(of(law, 'needs')).members.find((need) => need.startsWith(`${value(asked, `samples/${side}`) ?? side}/`));
+  const family = value(asked, `samples/${side}`);
+  const at = family === undefined ? undefined : alphabet(of(law, 'needs')).members.find((need) => need.startsWith(`${family.replace(/\/$/, '')}/`));
   const said = (field: string): string | undefined => (at === undefined ? undefined : receiptValue(asked, 'laws', `said/${field}`, at));
-  return { held: said('fields') !== undefined, at, about: said('about')?.split('\n'), title: said('title'), brief: said('brief') };
+  return { recorded: at !== undefined && receipts(asked, 'laws').some((line) => placeOf(line) === at && of(line, 'scope').startsWith('said/')), at, about: said('about')?.split('\n'), title: said('title'), brief: said('brief') };
 };
 /** A conjecture as its two samples say it: its title, what it claims and what would break it. */
 export const conjectured = (asked: Asked, law: Handed): string => ((yes: Sample, no: Sample) => say(asked, 'open/conjecture', { title: yes.title ?? sentence(asked, lawName(asked, law)).slice(0, -1),

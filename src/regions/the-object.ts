@@ -26,7 +26,9 @@ export const render = (asked: Asked): readonly string[] => {
   const head = tuple(asked);
   const written = head === undefined ? [] : ['```text', head, ...aligned(asked), '```'];
   const [glyphs, rows] = [new Map(pairs(asked, 'notation/renders').map(([state]) => [state, painted(asked, state).glyph ?? ''] as const)), pairs(asked, 'notation/states')];
-  const [width, widest, gap] = [hull([0, ...rows.map(([when]) => when.length)]).hi, hull([0, ...rows.map(([, state]) => state.length)]).hi, spacing(asked, 'table/gap')];
-  const table = rows.length ? ['```text', ...rows.map(([when, state]) => `${when.padEnd(width + gap.state)}${state.padEnd(widest + gap.glyph)}${glyphs.get(state) ?? ''}`), '```'] : [];
+  const seen = new Set<string>();
+  const unique = rows.filter(([, state]) => (seen.has(state) ? false : (seen.add(state), true)));
+  const [width, widest, gap] = [hull([0, ...unique.map(([when]) => when.length)]).hi, hull([0, ...unique.map(([, state]) => state.length)]).hi, spacing(asked, 'table/gap')];
+  const table = unique.length ? ['```text', ...unique.map(([when, state]) => `${when.padEnd(width + gap.state)}${state.padEnd(widest + gap.glyph)}${glyphs.get(state) ?? ''}`), '```'] : [];
   return resolved(asked, !written.length && !table.length ? [] : [`## ${prose(asked, 'the-object/heading') ?? ''}`, '', ...written, ...(table.length ? ['', ...table] : [])]);
 };
